@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Fragments</string>
+    <string name="empty">List city is empty</string>
+    <string-array name="Cities">
+        <item>Moscow</item>
+        <item>Saint Petersburg</item>
+        <item>Ekaterinburg</item>
+        <item>Samara</item>
+        <item>Novosibirsk</item>
+    </string-array>
 </resources>

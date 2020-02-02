@@ -20,7 +20,7 @@ public class CoatOfArmsActivity extends Activity {
         if (savedInstanceState == null){
             CoatOfArmsFragment details = new CoatOfArmsFragment();
             details.setArguments(getIntent().getExtras());
-             getFragmentManager().beginTransaction().add(android.R.id.content, details).commit();
+             //getFragmentManager().beginTransaction().add(android.R.id.content, details).commit();
 
 
         }

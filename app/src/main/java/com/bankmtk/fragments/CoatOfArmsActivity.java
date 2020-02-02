@@ -19,9 +19,9 @@ public class CoatOfArmsActivity extends Activity {
         }
         if (savedInstanceState == null){
             CoatOfArmsFragment details = new CoatOfArmsFragment();
-            details.setArguments(getIntent().getExtras());
+             details.setArguments(getIntent().getExtras());
              //getFragmentManager().beginTransaction().add(android.R.id.content, details).commit();
-
+//question  api, build for 29
 
         }
     }

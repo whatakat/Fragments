@@ -21,14 +21,15 @@ public class CoatOfArmsFragment extends Fragment {
         f.setArguments(args);
         return f;
     }
-    public int getIndex(){
-        int index = getArguments().getInt("index",0);
-        return index;
+    public Parcel getParcel(){
+        Parcel parcel  =(Parcel)getArguments().getSerializable(PARCEL);
+        return parcel;
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //View layout = inflater.inflate(R.layout.fr)
         ImageView coatOfArms = new ImageView(getActivity());
         TypedArray imgs =
                 getResources().obtainTypedArray(R.array.coatofarms_imgs);

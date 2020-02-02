@@ -12,10 +12,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class CoatOfArmsFragment extends Fragment {
-    public static CoatOfArmsFragment create(int index){
+    public static final String PARCEL = "parcel";
+
+    public static CoatOfArmsFragment create(Parcel parcel){
         CoatOfArmsFragment f = new CoatOfArmsFragment();
         Bundle args = new Bundle();
-        args.putInt("index", index);
+        args.putSerializable(PARCEL, parcel);
         f.setArguments(args);
         return f;
     }

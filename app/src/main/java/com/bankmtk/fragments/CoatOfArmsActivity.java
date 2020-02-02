@@ -1,6 +1,7 @@
 package com.bankmtk.fragments;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -19,7 +20,9 @@ public class CoatOfArmsActivity extends Activity {
         if (savedInstanceState == null){
             CoatOfArmsFragment details = new CoatOfArmsFragment();
             details.setArguments(getIntent().getExtras());
-            //getFragmentManager().beginTransaction().add(android.R.content, details).commit();
+             getFragmentManager().beginTransaction().add(android.R.id.content,details).commit();
+
+
         }
     }
 }

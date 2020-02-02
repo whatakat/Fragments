@@ -32,11 +32,13 @@ public class CoatOfArmsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_coatofarm,container,false);
         ImageView coatOfArms = (ImageView)layout.findViewById(R.id.imageView);
-        TextView textView = (TextView)layout.findViewById(R.id.textView);
+        TextView cityNameView = (TextView)layout.findViewById(R.id.textView);
+
         TypedArray imgs =
                 getResources().obtainTypedArray(R.array.coatofarms_imgs);
         Parcel parcel = getParcel();
         coatOfArms.setImageResource(imgs.getResourceId(parcel.getImageIndex(),-1));
+        cityNameView.setText(parcel.getCityName());
         return layout;
     }
 }

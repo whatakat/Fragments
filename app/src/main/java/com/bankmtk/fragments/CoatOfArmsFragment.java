@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,11 +30,13 @@ public class CoatOfArmsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //View layout = inflater.inflate(R.layout.fr)
-        ImageView coatOfArms = new ImageView(getActivity());
+        View layout = inflater.inflate(R.layout.fragment_coatofarm,container,false);
+        ImageView coatOfArms = (ImageView)layout.findViewById(R.id.imageView);
+        TextView textView = (TextView)layout.findViewById(R.id.textView);
         TypedArray imgs =
                 getResources().obtainTypedArray(R.array.coatofarms_imgs);
-        coatOfArms.setImageResource(imgs.getResourceId(getIndex(),-1));
-        return coatOfArms;
+        Parcel parcel = getParcel();
+        coatOfArms.setImageResource(imgs.getResourceId(parcel.getImageIndex(),-1));
+        return layout;
     }
 }
